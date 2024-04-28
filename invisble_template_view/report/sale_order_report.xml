@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_saleorder_document_custom" inherit_id="sale.report_saleorder_document">
+        
+        <!-- REPLACING THE DISCOUNT WITH NOTHING FROM PRODUCT LINE TABLE -->
+        <!-- <xpath expr="//th[@name='th_priceunit']" position="replace"/>
+        <xpath expr="//td[@name='td_priceunit']" position="replace"/> -->
+        
+
+        <!-- USING T-IF FOR MAKING DISCOUNT COLUMN INVISIBLE -->
+        <!-- <xpath expr="//th[@name='th_priceunit']" position="replace">
+            <t t-if="False">
+                <th name="th_priceunit" class="text-end">Unit Price</th>
+            </t>
+        </xpath>
+        <xpath expr="//td[@name='td_priceunit']" position="replace">
+            <t t-if="False">
+                <td name="td_priceunit" class="text-end">
+                    <span t-field="line.price_unit">3</span>
+                </td>
+            </t>
+        </xpath> -->
+
+
+        <!-- USING CLASS D-NONE FOR MAKING INVISIBLE -->
+        <!-- <xpath expr="//th[@name='th_priceunit']" position="attributes">
+            <attribute name="class">d-none</attribute>
+        </xpath>
+        <xpath expr="//td[@name='td_priceunit']" position="attributes">
+            <attribute name="class">d-none</attribute>
+        </xpath> -->
+        
+
+        <!-- ADDING A NEW COLUMN IN PRODUCT LINE TABLE -->
+        <xpath expr="//th[@name='th_priceunit']" position="before">
+            <th name='th_product_type'>Product Type</th>
+        </xpath>
+        <xpath expr="//td[@name='td_priceunit']" position="before">
+            <td><span t-field="line.product_type" /></td>
+        </xpath>
+    </template>
+</odoo>
