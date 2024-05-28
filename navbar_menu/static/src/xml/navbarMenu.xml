@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="NavbarMenu" owl="1">
+        <div class="NavbarMenuContainer">
+            <div class="o_NavbarMenu dropdown">
+                <a class="o_NavbarMenu_toggler dropdown-toggle o-no-caret o-dropdown--narrow" href="#" title="Navbar Menu" role="button" aria-haspopup="true" t-on-click="onClickNavbarMenu">
+                    <i class="o_NavbarMenu_icon fa fa-lg fa-file-text-o" role="img" aria-label="NavbarMenu" />
+                </a>
+            </div>
+        </div>
+    </t>
+</templates>
